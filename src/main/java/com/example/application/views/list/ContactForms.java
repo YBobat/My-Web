@@ -1,4 +1,6 @@
 package com.example.application.views.list;
 
-public class ContactForms {
+import com.vaadin.flow.component.formlayout.FormLayout;
+
+public class ContactForms extends FormLayout {
 }
