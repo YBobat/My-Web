@@ -1,6 +1,7 @@
 package com.example.application.views.list;
 
 import com.example.application.data.entity.Contact;
+import com.example.application.data.service.ServiceClass;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -21,11 +22,13 @@ import java.util.Collections;
 @PageTitle("Contacts")
 @Route(value = "")
 public class ListView extends VerticalLayout {
+    private ServiceClass service;
     Grid<Contact> grid = new Grid<>(Contact.class);
     TextField filterText = new TextField();
     ContactForms form;
 
-    public ListView() {
+    public ListView(ServiceClass service) {
+        this.service = service;
         addClassName("listveiw");
         setSizeFull();
 
@@ -36,7 +39,12 @@ public class ListView extends VerticalLayout {
                 getToolbar(),
                 getContent()
         );
+        updateList();
 
+    }
+
+    private void updateList() {
+        grid.setItems(service.findAllContacts((filterText.getValue())));
     }
 
     private Component getContent(){
@@ -49,7 +57,7 @@ public class ListView extends VerticalLayout {
     }
 
     private void configureForm() {
-        form =new ContactForms(Collections.emptyList(),Collections.emptyList());
+        form =new ContactForms(service.findAllCompanies(), service.findAllStatuseds());
         form.setWidth("25em");
     }
 
@@ -57,6 +65,7 @@ public class ListView extends VerticalLayout {
         filterText.setPlaceholder("filter by name");
         filterText.setClearButtonVisible(true);
         filterText.setValueChangeMode(ValueChangeMode.LAZY);
+        filterText.addValueChangeListener(e -> updateList());
 
         Button addContactButton = new Button("Add contact");
         HorizontalLayout toolbar = new HorizontalLayout(filterText, addContactButton);
