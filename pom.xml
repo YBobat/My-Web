@@ -76,6 +76,10 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
@@ -88,6 +92,61 @@
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-testbench-junit5</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.vaadin.spring</groupId>
+            <artifactId>spring-vaadin-security</artifactId>
+            <version>0.0.5.RELEASE</version>
         </dependency>
     </dependencies>
 

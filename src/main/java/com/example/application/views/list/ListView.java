@@ -15,12 +15,14 @@ import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
+import jakarta.annotation.security.PermitAll;
 
 import java.util.Collections;
 
 
 @PageTitle("Contacts")
 @Route(value = "", layout = MainLayout.class)
+@PermitAll
 public class ListView extends VerticalLayout {
     private ServiceClass service;
     Grid<Contact> grid = new Grid<>(Contact.class);
